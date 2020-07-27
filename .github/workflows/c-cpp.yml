@@ -13,9 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: configure
+      run: unix/configure
     - name: make
-      run: make
+      run: unix/make
     - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      run: unix/make check
